@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
-    has_many :posts
-    has_many :captions
+  
+    def index
+        @users = User.all
+        render json: @users
+    end
 end
